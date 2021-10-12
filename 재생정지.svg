@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="44" viewBox="0 0 24 44">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #79a2e8;
+      }
+    </style>
+  </defs>
+  <g id="재생정지" transform="translate(-147 -400)">
+    <rect id="사각형_1" data-name="사각형 1" class="cls-1" width="10" height="44" rx="2" transform="translate(147 400)"/>
+    <rect id="사각형_2" data-name="사각형 2" class="cls-1" width="10" height="44" rx="2" transform="translate(161 400)"/>
+  </g>
+</svg>

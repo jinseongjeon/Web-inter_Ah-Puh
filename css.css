@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;900&display=swap");
+
+body {
+  background: #fff;
+  margin: 0px 100px;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#flexbox0 {
+  display: flex;
+  justify-content: space-between;
+}
+.flexbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80vw;
+  height: 100vh;
+  align-items: center;
+  justify-items: center;
+}
+.flexbox2 {
+  display: flex;
+  justify-content: center;
+}
+.lyric_icon {
+  width: 60px;
+  height: auto;
+}
+.lyric_icon:first-child {
+  margin-right: 40px;
+}
+.lyric_icon:last-child {
+  margin-left: 40px;
+}
+.music-card {
+  background: #fff;
+  box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  height: 500px;
+  border-radius: 6px;
+}
+
+.image {
+  background: url("IU.png") no-repeat 75%;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.3;
+  height: 300px;
+  width: 300px;
+}
+
+.image:after {
+  height: 100px;
+  content: "";
+  top: 200px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  background: linear-gradient(rgba(89, 124, 219, 0.1), #7caceb);
+}
+
+.wave {
+  position: absolute;
+  height: 720px;
+  width: 720px;
+  opacity: 0.6;
+  left: 0;
+  top: 0;
+  margin-left: -70%;
+  margin-top: -130%;
+  background: radial-gradient(rgb(89, 124, 219), #7caceb);
+}
+
+.wave:nth-child(2),
+.wave:nth-child(3) {
+  top: 10px;
+}
+
+.playing .wave {
+  border-radius: 40%;
+  animation: wave 3000ms infinite linear;
+}
+/* when stop */
+.wave {
+  border-radius: 40%;
+  animation: wave 55s infinite linear;
+}
+
+.playing .wave:nth-child(2) {
+  animation-duration: 4000ms;
+}
+/* when stop */
+.wave:nth-child(2) {
+  animation-duration: 50s;
+}
+
+.playing .wave:nth-child(3) {
+  animation-duration: 5000ms;
+}
+/* when stop */
+.wave:nth-child(3) {
+  animation-duration: 45s;
+}
+
+.info {
+  position: absolute;
+  bottom: 36px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.4em;
+  font-weight: 400;
+  color: rgb(89, 124, 219);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.artist {
+  color: #7caceb;
+  font-size: 1em;
+  letter-spacing: 0.08em;
+  font-weight: 300;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.play {
+  position: absolute;
+  bottom: 16px;
+  right: 14px;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+}
+.lyrics {
+  font-weight: 900;
+  font-size: 40px;
+  color: rgb(89, 124, 219);
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
+  margin-top: 14px;
+  line-height: 60px;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 254, 234, 1) 0%,
+    rgba(255, 254, 234, 1) 35%,
+    #b7e8eb 100%
+  );
+  overflow: hidden;
+}
+
+.ocean1 {
+  height: 5%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #015871;
+  z-index: -1;
+}
+
+.wave1 {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg)
+    repeat-x;
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave1 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave1:nth-of-type(2) {
+  top: -175px;
+  animation: wave1 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+    swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave1 {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%,
+  100% {
+    transform: translate3d(0, -25px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}
